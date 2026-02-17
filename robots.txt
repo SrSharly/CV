@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://carlos-arcas.github.io/CV/sitemap.xml
