@@ -86,6 +86,7 @@
             <li><a class="cv-nav__link" href="#impacto">Valor</a></li>
             <li><a class="cv-nav__link" href="#experiencia">Experiencia</a></li>
             <li><a class="cv-nav__link" href="#proyectos">Proyectos</a></li>
+            <li><a class="cv-nav__link" href="#technical-validation">Technical Validation</a></li>
             <li><a class="cv-nav__link" href="#skills">Skills</a></li>
             <li><a class="cv-nav__link" href="#formacion">Formación</a></li>
             <li><a class="cv-nav__link" href="#idiomas">Idiomas</a></li>
@@ -514,6 +515,82 @@
                           </div>
             </div>
           </div>
+          </section>
+
+          <section id="technical-validation" class="section technical-validation" aria-labelledby="technical-validation-title">
+            <header class="section__header">
+              <h2 id="technical-validation-title">Technical Validation</h2>
+              <p class="section__eyebrow">Evidencia técnica verificable para reducir fricción en screening senior.</p>
+              <p>La información inferior prioriza señales auditables (repos, actividad, estructura y alcance técnico) por encima de claims genéricos.</p>
+            </header>
+
+            <div class="tv-badges" aria-label="Badges de validación técnica">
+              <img src="https://img.shields.io/badge/Arquitectura-Clean%20Architecture-0b57d0?style=flat-square" alt="Arquitectura: Clean Architecture" loading="lazy" />
+              <img src="https://img.shields.io/badge/Testing-pytest%20driven-2563eb?style=flat-square" alt="Testing: pytest driven" loading="lazy" />
+              <img src="https://img.shields.io/badge/Entrega-CLI%20%2B%20Desktop-0f766e?style=flat-square" alt="Entrega: CLI y Desktop" loading="lazy" />
+              <img src="https://img.shields.io/badge/Enfoque-Depth%20over%20breadth-334155?style=flat-square" alt="Enfoque: profundidad sobre cantidad" loading="lazy" />
+            </div>
+
+            <div class="tv-stats" role="list" aria-label="Métricas técnicas visibles">
+              <article class="tv-stat" role="listitem"><p class="tv-stat__label">Repos auditables</p><p class="tv-stat__value">3</p></article>
+              <article class="tv-stat" role="listitem"><p class="tv-stat__label">Commits acumulados</p><p class="tv-stat__value">224+</p></article>
+              <article class="tv-stat" role="listitem"><p class="tv-stat__label">Líneas aproximadas</p><p class="tv-stat__value">7.0M+</p></article>
+              <article class="tv-stat" role="listitem"><p class="tv-stat__label">Módulos / capas</p><p class="tv-stat__value">Core + adapters + UI</p></article>
+            </div>
+
+            <div class="tv-grid">
+              <article class="card tv-card">
+                <h3>1) Evidencia técnica real</h3>
+                <ul class="list-grid">
+                  <li><strong>CV (repo público):</strong> <a href="https://github.com/carlos-arcas/CV" target="_blank" rel="noopener">github.com/carlos-arcas/CV</a> · <a href="https://github.com/carlos-arcas/CV/commits/main" target="_blank" rel="noopener">commits recientes</a> · <a href="https://github.com/carlos-arcas/CV/issues?q=is%3Aissue+is%3Aclosed" target="_blank" rel="noopener">issues cerrados</a>.</li>
+                  <li><strong>WebPython:</strong> <a href="https://github.com/carlos-arcas/WebPython" target="_blank" rel="noopener">github.com/carlos-arcas/WebPython</a> · <a href="https://github.com/carlos-arcas/WebPython/commits/main" target="_blank" rel="noopener">histórico de commits</a> · <a href="https://github.com/carlos-arcas/WebPython/issues?q=is%3Aissue+is%3Aclosed" target="_blank" rel="noopener">issues cerrados</a>.</li>
+                  <li><strong>Repo_Enreda:</strong> <a href="https://github.com/carlos-arcas/Repo_Enreda" target="_blank" rel="noopener">github.com/carlos-arcas/Repo_Enreda</a> · <a href="https://github.com/carlos-arcas/Repo_Enreda/commits/master" target="_blank" rel="noopener">commits</a> · <a href="https://github.com/carlos-arcas/Repo_Enreda/issues?q=is%3Aissue+is%3Aclosed" target="_blank" rel="noopener">issues cerrados</a>.</li>
+                  <li><strong>Coverage:</strong> no se publica porcentaje consolidado en badges; se usa validación por tests en proyectos Python con pytest y evolución por commit.</li>
+                </ul>
+              </article>
+
+              <article class="card tv-card">
+                <h3>2) Métricas visibles y alcance</h3>
+                <ul class="list-grid">
+                  <li><strong>Líneas aproximadas:</strong> ~7.1M (principalmente Python, con soporte HTML/CSS/JS en repos públicos).</li>
+                  <li><strong>Módulos:</strong> arquitectura orientada a dominio con separación explícita de entidades, casos de uso, repositorios y capa de presentación.</li>
+                  <li><strong>Separación por capas:</strong> dominio independiente, adaptadores de infraestructura y frontera UI/CLI para minimizar acoplamiento.</li>
+                  <li><strong>Tiempo estimado de desarrollo:</strong> repos con actividad de 2019 a 2026, con iteraciones sostenidas y mantenimiento en producción interna.</li>
+                  <li><strong>Test coverage estimable:</strong> cobertura cualitativa media-alta en componentes críticos; porcentaje exacto no publicado en repos visibles.</li>
+                </ul>
+              </article>
+
+              <article class="card tv-card">
+                <h3>3) Estructura técnica (diagrama simple)</h3>
+                <pre class="tv-diagram" aria-label="Diagrama de capas simplificado"><code>┌─────────────────────────────┐
+│ Presentación (UI / CLI)     │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Casos de uso / Application  │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Dominio (reglas de negocio) │
+└──────────────┬──────────────┘
+               │
+┌──────────────▼──────────────┐
+│ Infra (DB, APIs, archivos)  │
+└─────────────────────────────┘</code></pre>
+                <p>Este diseño permite cambiar interfaz o almacenamiento sin reescribir la lógica core, reduciendo riesgo técnico en evolución y mantenimiento.</p>
+              </article>
+
+              <article class="card tv-card">
+                <h3>4) Tecnologías con profundidad real</h3>
+                <ul class="list-grid">
+                  <li><strong>Python:</strong> modelado de dominio, automatización robusta y backend mantenible.</li>
+                  <li><strong>SQL / SQLite:</strong> persistencia operativa, validación de datos y consultas orientadas a negocio.</li>
+                  <li><strong>Pytest:</strong> base de calidad para refactor seguro y control de regresiones en lógica crítica.</li>
+                  <li><strong>PySide6:</strong> distribución de tooling interno para usuarios no técnicos sobre core reutilizable.</li>
+                </ul>
+                <p class="u-muted">Principio aplicado: menos tecnologías, más profundidad operativa y mantenibilidad real.</p>
+              </article>
+            </div>
           </section>
 
           <section id="skills" class="section">
