@@ -146,14 +146,18 @@
               <p class="section__eyebrow">Casos de estudio orientados a arquitectura mantenible, decisiones de diseño y resolución de retos de ingeniería.</p>
             </header>
 
-            <nav class="projects-dots" aria-label="Ir a proyecto">
-              <a href="#proj-horas"><span class="u-sr-only">Horas Sindicales</span></a>
-              <a href="#proj-clinicdesk"><span class="u-sr-only">ClinicDesk</span></a>
-              <a href="#proj-bateria"><span class="u-sr-only">Batería Fotovoltaica</span></a>
+            <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Proyectos destacados">
+            <p class="u-sr-only" id="carousel-help">Usa los enlaces de navegación para cambiar de proyecto. También puedes desplazar horizontalmente este carrusel.</p>
+
+            <nav class="carousel-dots" aria-label="Ir a proyecto" aria-describedby="carousel-help">
+              <a href="#p1" class="carousel-dot" aria-current="true" aria-label="Ver proyecto 1: Horas Sindicales"><span class="u-sr-only">Horas Sindicales</span></a>
+              <a href="#p2" class="carousel-dot" aria-label="Ver proyecto 2: ClinicDesk"><span class="u-sr-only">ClinicDesk</span></a>
+              <a href="#p3" class="carousel-dot" aria-label="Ver proyecto 3: Batería Fotovoltaica"><span class="u-sr-only">Batería Fotovoltaica</span></a>
             </nav>
 
-            <div class="projects-track">
-              <article class="project-card card" id="proj-horas">
+            <div class="carousel-viewport">
+              <div class="carousel-track" tabindex="0" aria-label="Listado de proyectos en carrusel">
+              <article class="project-card card" id="p1" tabindex="-1">
                 <header class="project-card__header">
                   <h3>Horas Sindicales</h3>
                   <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">SQLite</span><span class="chip">PyInstaller</span></div>
@@ -244,11 +248,11 @@
                 </div>
                 <footer class="project-card__footer">
                   <a class="btn" href="https://github.com/carlos-arcas/Horas_Sindicales" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-bateria">← Prev</a><a class="btn btn--ghost" href="#proj-clinicdesk">Next →</a></div>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#p3">← Prev</a><a class="btn btn--ghost" href="#p2">Next →</a></div>
                 </footer>
               </article>
 
-              <article class="project-card card" id="proj-clinicdesk">
+              <article class="project-card card" id="p2" tabindex="-1">
                 <header class="project-card__header">
                   <h3>ClinicDesk</h3>
                   <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">SQLite</span><span class="chip">pytest</span></div>
@@ -339,11 +343,11 @@
                 </div>
                 <footer class="project-card__footer">
                   <a class="btn" href="https://github.com/carlos-arcas/clinicdesk" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-horas">← Prev</a><a class="btn btn--ghost" href="#proj-bateria">Next →</a></div>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#p1">← Prev</a><a class="btn btn--ghost" href="#p3">Next →</a></div>
                 </footer>
               </article>
 
-              <article class="project-card card" id="proj-bateria">
+              <article class="project-card card" id="p3" tabindex="-1">
                 <header class="project-card__header">
                   <h3>Batería Fotovoltaica</h3>
                   <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">tests</span><span class="chip">Excel export</span></div>
@@ -434,10 +438,12 @@
                 </div>
                 <footer class="project-card__footer">
                   <a class="btn" href="https://github.com/carlos-arcas/Bateria_Fotovoltaica" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-clinicdesk">← Prev</a><a class="btn btn--ghost" href="#proj-horas">Next →</a></div>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#p2">← Prev</a><a class="btn btn--ghost" href="#p1">Next →</a></div>
                 </footer>
               </article>
+                          </div>
             </div>
+          </div>
           </section>
 
           <section id="skills" class="section">
