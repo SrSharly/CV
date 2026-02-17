@@ -415,7 +415,7 @@ main > section:target {
 
 main > section:hover,
 main > article:hover,
-.card:hover,
+.card:not(.flip-front):not(.flip-back):hover,
 .section:hover,
 .kpi:hover {
   transform: translateY(-2px);
@@ -465,11 +465,11 @@ main > section ul,
 }
 
 .flip-card {
-  min-height: 22rem;
+  min-height: 16rem;
 }
 
 .flip-inner {
-  position: relative;
+  display: grid;
   width: 100%;
   min-height: inherit;
   transform-style: preserve-3d;
@@ -478,21 +478,16 @@ main > section ul,
 
 .flip-front,
 .flip-back {
+  grid-area: 1 / 1;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  min-height: 22rem;
+  min-height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-.flip-front {
-  position: relative;
-}
-
 .flip-back {
-  position: absolute;
-  inset: 0;
   transform: rotateY(180deg);
 }
 
@@ -526,25 +521,6 @@ main > section ul,
 .flip-toggle:focus-visible + .flip-card .flip-btn {
   outline: 3px solid color-mix(in srgb, var(--accent) 75%, white 25%);
   outline-offset: 3px;
-}
-
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  body:has(#mode-cyber:checked) .flip-wrapper:hover .flip-inner {
-    transform: rotateY(180deg);
-  }
-
-  body:has(#mode-cyber:checked) .flip-wrapper:hover .flip-front,
-  body:has(#mode-cyber:checked) .flip-wrapper:hover .flip-back {
-    box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent 45%),
-      0 20px 36px color-mix(in srgb, #7b5cff 42%, transparent 58%),
-      0 0 18px color-mix(in srgb, var(--accent) 26%, transparent 74%);
-  }
-}
-
-#mode-cyber:checked ~ .app .flip-wrapper:hover .flip-front,
-#mode-cyber:checked ~ .app .flip-wrapper:hover .flip-back {
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent 55%),
-    0 18px 34px color-mix(in srgb, #7b5cff 38%, transparent 62%);
 }
 
 #mode-cyber:checked ~ .app {
@@ -631,7 +607,7 @@ main > section ul,
   }
 }
 
-#mode-cyber:checked ~ .app .card:hover,
+#mode-cyber:checked ~ .app .card:not(.flip-front):not(.flip-back):hover,
 #mode-cyber:checked ~ .app .section:hover,
 #mode-cyber:checked ~ .app .kpi:hover,
 #mode-cyber:checked ~ .app main > section:hover,
@@ -673,7 +649,6 @@ body:has(#mode-cyber:checked):has(#contacto:target) nav a[href="#contacto"] {
   transition: transform 680ms cubic-bezier(0.18, 0.86, 0.24, 1);
 }
 
-#mode-cyber:checked ~ .app .flip-wrapper:hover .flip-inner,
 #mode-cyber:checked ~ .app .flip-toggle:checked + .flip-card .flip-inner {
   filter: drop-shadow(0 14px 28px color-mix(in srgb, #7b5cff 34%, transparent 66%)) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--accent) 20%, transparent 80%));
 }
@@ -750,7 +725,7 @@ body:has(#mode-cyber:checked):has(#contacto:target) nav a[href="#contacto"] {
 
 #mode-brutal:checked ~ .app main > section:hover,
 #mode-brutal:checked ~ .app main > article:hover,
-#mode-brutal:checked ~ .app .card:hover,
+#mode-brutal:checked ~ .app .card:not(.flip-front):not(.flip-back):hover,
 #mode-brutal:checked ~ .app .section:hover,
 #mode-brutal:checked ~ .app .kpi:hover {
   transform: translate(-4px, -4px);
@@ -1359,7 +1334,7 @@ Checklist:
 Checklist flip cards:
 - [ ] Flip funciona con click
 - [ ] Flip funciona con teclado
-- [ ] Hover flip solo en Cyberpunk
+- [ ] Flip solo con click/tap (sin hover)
 - [ ] Contenido visible en DOM
 - [ ] No rompe layout móvil
 */
