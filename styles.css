@@ -43,7 +43,7 @@
 }
 
 #mode-cyber:checked ~ .app {
-  --bg: #090a1f;
+  --bg: #070812;
   --text: #ddf6ff;
   --muted: #93b7d7;
   --card: #101838;
@@ -54,7 +54,7 @@
   --anim: 220ms ease;
   --navbg: color-mix(in srgb, var(--card) 82%, #1d1240 18%);
   --chipbg: color-mix(in srgb, var(--card) 70%, #0f2a57 30%);
-  --nav-active-glow: 0 0 0.65rem color-mix(in srgb, var(--accent) 75%, transparent 25%);
+  --nav-active-glow: 0 0 0.75rem color-mix(in srgb, var(--accent) 58%, transparent 42%);
 }
 
 #mode-brutal:checked ~ .app {
@@ -114,6 +114,8 @@ body {
 }
 
 .app {
+  position: relative;
+  isolation: isolate;
   min-height: 100vh;
   color: var(--text);
   background:
@@ -121,6 +123,17 @@ body {
     radial-gradient(circle at 88% 8%, color-mix(in srgb, var(--accent) 12%, #7b5cff 88%), transparent 40%),
     linear-gradient(180deg, color-mix(in srgb, var(--bg) 78%, #ffffff 22%) 0%, var(--bg) 55%, color-mix(in srgb, var(--bg) 70%, #0b0f22 30%) 100%);
   transition: background var(--anim), color var(--anim);
+}
+
+.app::before,
+.app::after {
+  content: "";
+  position: fixed;
+  inset: -12vmax;
+  pointer-events: none;
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 320ms ease;
 }
 
 img,
@@ -484,6 +497,137 @@ main > section ul,
     0 18px 34px color-mix(in srgb, #7b5cff 38%, transparent 62%);
 }
 
+#mode-cyber:checked ~ .app {
+  background:
+    linear-gradient(180deg, #070812 0%, #090d1f 56%, #05060f 100%);
+}
+
+#mode-cyber:checked ~ .app::before {
+  opacity: 0.55;
+  background:
+    radial-gradient(42rem 30rem at 14% 18%, color-mix(in srgb, var(--accent) 24%, transparent 76%), transparent 68%),
+    radial-gradient(35rem 28rem at 84% 14%, color-mix(in srgb, #7b5cff 42%, transparent 58%), transparent 70%),
+    radial-gradient(52rem 36rem at 52% 82%, color-mix(in srgb, #ff4fd8 22%, transparent 78%), transparent 74%),
+    linear-gradient(125deg, rgba(12, 18, 46, 0.76) 0%, rgba(6, 10, 28, 0.96) 58%, rgba(3, 5, 14, 1) 100%);
+  filter: blur(34px) saturate(115%);
+}
+
+#mode-cyber:checked ~ .app::after {
+  z-index: -1;
+  opacity: 0.2;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.03) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgba(142, 199, 255, 0.018) 0 2px, transparent 2px 5px);
+}
+
+#mode-cyber:checked ~ .app h1 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.2rem;
+  text-shadow: 0 0 0.45rem color-mix(in srgb, var(--accent) 22%, transparent 78%);
+}
+
+#mode-cyber:checked ~ .app h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.05rem;
+  width: 100%;
+  height: 0.18rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, color-mix(in srgb, #7b5cff 70%, white 30%), var(--accent) 52%, color-mix(in srgb, #ff4fd8 68%, white 32%));
+  transform: scaleX(0.1);
+  transform-origin: left;
+  opacity: 0.7;
+  transition: transform 620ms cubic-bezier(0.22, 1, 0.36, 1), opacity 320ms ease;
+}
+
+#mode-cyber:checked ~ .app h1:hover::after,
+#mode-cyber:checked ~ .app h1:focus-visible::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+#mode-cyber:checked ~ .app .card,
+#mode-cyber:checked ~ .app .flip-front,
+#mode-cyber:checked ~ .app .flip-back {
+  position: relative;
+}
+
+@supports (background: conic-gradient(from 0deg, #000, #fff)) {
+  #mode-cyber:checked ~ .app .card::before,
+  #mode-cyber:checked ~ .app .flip-front::before,
+  #mode-cyber:checked ~ .app .flip-back::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: conic-gradient(from 0deg, color-mix(in srgb, var(--accent) 64%, transparent 36%), color-mix(in srgb, #7b5cff 70%, transparent 30%), color-mix(in srgb, #ff4fd8 62%, transparent 38%), color-mix(in srgb, var(--accent) 64%, transparent 36%));
+    opacity: 0.34;
+    pointer-events: none;
+    animation: cyber-border-spin 26s linear infinite;
+    filter: saturate(120%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  #mode-cyber:checked ~ .app .card > *,
+  #mode-cyber:checked ~ .app .flip-front > *,
+  #mode-cyber:checked ~ .app .flip-back > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+#mode-cyber:checked ~ .app .card:hover,
+#mode-cyber:checked ~ .app .section:hover,
+#mode-cyber:checked ~ .app .kpi:hover,
+#mode-cyber:checked ~ .app main > section:hover,
+#mode-cyber:checked ~ .app main > article:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--accent) 52%, transparent 48%),
+    0 16px 36px color-mix(in srgb, #7b5cff 40%, transparent 60%),
+    0 0 1.25rem color-mix(in srgb, var(--accent) 28%, transparent 72%);
+}
+
+#mode-cyber:checked ~ .app .btn,
+#mode-cyber:checked ~ .app .btn-secondary,
+#mode-cyber:checked ~ .app .flip-btn {
+  transition: transform var(--anim), box-shadow var(--anim), border-color var(--anim), background-color var(--anim);
+}
+
+#mode-cyber:checked ~ .app .btn:hover,
+#mode-cyber:checked ~ .app .btn-secondary:hover,
+#mode-cyber:checked ~ .app .flip-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px color-mix(in srgb, #7b5cff 28%, transparent 72%), 0 0 0.65rem color-mix(in srgb, var(--accent) 22%, transparent 78%);
+}
+
+#mode-cyber:checked ~ .app nav a[aria-current="page"],
+body:has(#mode-cyber:checked):has(#hero:target) nav a[href="#hero"],
+body:has(#mode-cyber:checked):has(#impacto:target) nav a[href="#impacto"],
+body:has(#mode-cyber:checked):has(#experiencia:target) nav a[href="#experiencia"],
+body:has(#mode-cyber:checked):has(#proyectos:target) nav a[href="#proyectos"],
+body:has(#mode-cyber:checked):has(#skills:target) nav a[href="#skills"],
+body:has(#mode-cyber:checked):has(#formacion:target) nav a[href="#formacion"],
+body:has(#mode-cyber:checked):has(#idiomas:target) nav a[href="#idiomas"],
+body:has(#mode-cyber:checked):has(#contacto:target) nav a[href="#contacto"] {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 45%, transparent 55%), var(--nav-active-glow);
+}
+
+#mode-cyber:checked ~ .app .flip-inner {
+  transition: transform 680ms cubic-bezier(0.18, 0.86, 0.24, 1);
+}
+
+#mode-cyber:checked ~ .app .flip-wrapper:hover .flip-inner,
+#mode-cyber:checked ~ .app .flip-toggle:checked + .flip-card .flip-inner {
+  filter: drop-shadow(0 14px 28px color-mix(in srgb, #7b5cff 34%, transparent 66%)) drop-shadow(0 0 0.8rem color-mix(in srgb, var(--accent) 20%, transparent 80%));
+}
+
 #mode-brutal:checked ~ .app .flip-inner {
   transition-duration: 40ms;
   transition-timing-function: linear;
@@ -498,6 +642,12 @@ main > section ul,
 #mode-brutal:checked ~ .app .flip-btn {
   border-width: 3px;
   background: #fff;
+}
+
+@keyframes cyber-border-spin {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /*
@@ -528,6 +678,14 @@ Objetivo de accesibilidad:
 
   .app {
     background: var(--bg);
+  }
+
+  .app::before,
+  .app::after,
+  #mode-cyber:checked ~ .app .card::before,
+  #mode-cyber:checked ~ .app .flip-front::before,
+  #mode-cyber:checked ~ .app .flip-back::before {
+    display: none !important;
   }
 
   .flip-wrapper {
@@ -760,18 +918,6 @@ nav a[aria-current="page"]::after {
   }
 }
 
-#mode-cyber:checked ~ .app nav a[aria-current="page"],
-body:has(#mode-cyber:checked):has(#hero:target) nav a[href="#hero"],
-body:has(#mode-cyber:checked):has(#impacto:target) nav a[href="#impacto"],
-body:has(#mode-cyber:checked):has(#experiencia:target) nav a[href="#experiencia"],
-body:has(#mode-cyber:checked):has(#proyectos:target) nav a[href="#proyectos"],
-body:has(#mode-cyber:checked):has(#skills:target) nav a[href="#skills"],
-body:has(#mode-cyber:checked):has(#formacion:target) nav a[href="#formacion"],
-body:has(#mode-cyber:checked):has(#idiomas:target) nav a[href="#idiomas"],
-body:has(#mode-cyber:checked):has(#contacto:target) nav a[href="#contacto"] {
-  box-shadow: var(--nav-active-glow);
-}
-
 #mode-brutal:checked ~ .app nav a[aria-current="page"],
 body:has(#mode-brutal:checked):has(#hero:target) nav a[href="#hero"],
 body:has(#mode-brutal:checked):has(#impacto:target) nav a[href="#impacto"],
@@ -926,6 +1072,14 @@ body:has(#mode-brutal:checked):has(#contacto:target) nav a[href="#contacto"]::af
     background: #fff;
     color: #000;
     padding: 0;
+  }
+
+  .app::before,
+  .app::after,
+  .card::before,
+  .flip-front::before,
+  .flip-back::before {
+    display: none !important;
   }
 
   nav {
