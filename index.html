@@ -33,7 +33,7 @@
     <div class="cv">
       <div class="cv__shell">
         <header class="cv-header" id="inicio">
-          <h1>Carlos Arcas</h1>
+          <p class="cv-header__name">Carlos Arcas</p>
           <p>Python Application Engineer | Data Automation | BI</p>
           <p class="u-muted">Para guardar en PDF: Ctrl+P → Guardar como PDF</p>
           <ul class="cv-header__meta">
@@ -66,14 +66,26 @@
         </nav>
 
         <main class="cv__main">
-          <section id="hero" class="section">
-            <h2>Resumen profesional</h2>
-            <div class="section__content">
-              <p>Diseño y mantengo aplicaciones internas en Python con arquitectura por capas, orientadas a estabilidad operativa y mantenimiento evolutivo.</p>
-              <p>Combino PySide6, pytest y persistencia SQLite para construir soluciones desktop con reglas de negocio desacopladas e integración técnica controlada.</p>
-              <p>Desarrollo pipelines ETL y modelos para BI con SQL, SOQL y Power BI, entregando datasets trazables para reporting y toma de decisiones.</p>
-              <p>Busco rol como Python Application Engineer / Data Automation Engineer en entorno técnico con revisión de código.</p>
+          <section id="hero" class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+              <p class="hero__eyebrow">Disponible para roles senior en backend y data systems</p>
+              <h1 id="hero-title" class="hero__name">Carlos Arcas</h1>
+              <p class="hero__subtitle">Senior Python Engineer | Clean Architecture | Data Systems</p>
+              <p class="hero__tagline">Convierto procesos críticos en sistemas mantenibles: menos fricción operativa, más velocidad de entrega y decisiones con datos fiables.</p>
+              <div class="hero__cta-group" aria-label="Acciones principales del perfil">
+                <a class="btn hero__cta-primary" href="#proyectos">Ver proyectos</a>
+                <a class="btn btn--ghost hero__cta-secondary" href="#contacto" aria-label="Ver enlaces de GitHub y LinkedIn en la sección de contacto">GitHub / LinkedIn</a>
+              </div>
             </div>
+            <aside class="hero__panel" aria-label="Fortalezas técnicas clave">
+              <p class="hero__panel-title">Fortalezas técnicas</p>
+              <ul class="hero__highlights">
+                <li>Arquitectura por capas y puertos/adaptadores para sistemas evolutivos.</li>
+                <li>Backend sólido con Python, contratos explícitos y testing por riesgo.</li>
+                <li>Automatización de datos y ETL para operaciones con trazabilidad real.</li>
+                <li>Diseño estructurado orientado a mantenibilidad y escalado de producto.</li>
+              </ul>
+            </aside>
           </section>
 
           <section id="enfoque-tecnico" class="section">
