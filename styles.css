@@ -827,10 +827,18 @@ Objetivo de accesibilidad:
 
   .app::before,
   .app::after,
+  .projects-carousel-wrap::before,
+  .projects-carousel-wrap::after,
   #mode-cyber:checked ~ .app .card::before,
   #mode-cyber:checked ~ .app .flip-front::before,
   #mode-cyber:checked ~ .app .flip-back::before {
     display: none !important;
+  }
+
+  .project-card:target,
+  #mode-cyber:checked ~ .app .project-card:target,
+  #mode-brutal:checked ~ .app .project-card:target {
+    transform: none !important;
   }
 
   .flip-wrapper {
@@ -1003,6 +1011,163 @@ Objetivo de accesibilidad:
   clip-path: inset(50%);
   white-space: nowrap;
   border: 0;
+}
+
+
+#proyectos {
+  overflow: hidden;
+}
+
+.projects-nav {
+  position: static;
+  width: 100%;
+  margin: 0 0 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.projects-nav .dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 999px;
+  border: 2px solid color-mix(in srgb, var(--accent) 30%, var(--border) 70%);
+  background: color-mix(in srgb, var(--card) 70%, var(--border) 30%);
+  padding: 0;
+  min-height: auto;
+  transform: scale(1);
+}
+
+.projects-nav .dot::after {
+  display: none;
+}
+
+.projects-nav .dot:hover,
+.projects-nav .dot:focus-visible {
+  border-color: var(--accent);
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent 75%);
+}
+
+.projects-nav .dot:first-child {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.14);
+}
+
+.projects-carousel-wrap {
+  position: relative;
+}
+
+.projects-carousel-wrap::before,
+.projects-carousel-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(1.1rem, 4vw, 2rem);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.projects-carousel-wrap::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 0%, transparent 100%) 100%);
+}
+
+.projects-carousel-wrap::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--card) 0%, color-mix(in srgb, var(--card) 0%, transparent 100%) 100%);
+}
+
+.projects-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(100%, 1fr);
+  gap: 0.8rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 0.2rem;
+  padding: 0.2rem;
+  scrollbar-width: thin;
+}
+
+.project-card {
+  scroll-snap-align: start;
+  scroll-margin-top: calc(var(--section-offset) + 1.2rem);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--card) 95%, white 5%);
+  padding: clamp(0.9rem, 0.8rem + 0.5vw, 1.3rem);
+  transition: transform var(--anim), border-color var(--anim), box-shadow var(--anim), outline-color var(--anim);
+}
+
+.project-card:target {
+  border-color: color-mix(in srgb, var(--accent) 70%, var(--border) 30%);
+  outline: 3px solid color-mix(in srgb, var(--accent) 40%, transparent 60%);
+  outline-offset: 2px;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px color-mix(in srgb, var(--accent) 20%, transparent 80%);
+}
+
+.project-card:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border) 45%);
+}
+
+.project-cta {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.project-pager {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--border) 65%);
+}
+
+.btn.ghost:hover,
+.btn.ghost:focus-visible {
+  background: color-mix(in srgb, var(--accent) 10%, var(--card) 90%);
+  border-color: var(--accent);
+}
+
+#mode-cyber:checked ~ .app .project-card:target {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 60%, transparent 40%), 0 0 1rem color-mix(in srgb, var(--accent) 35%, transparent 65%), 0 14px 34px color-mix(in srgb, #7b5cff 42%, transparent 58%);
+}
+
+#mode-brutal:checked ~ .app .project-card:target {
+  outline: 4px solid var(--accent);
+  box-shadow: 7px 7px 0 var(--accent);
+  transform: none;
+}
+
+@supports selector(body:has(#proj-horas:target)) {
+  body:has(.project-card:target) .projects-nav .dot:first-child {
+    background: color-mix(in srgb, var(--card) 70%, var(--border) 30%);
+    border-color: color-mix(in srgb, var(--accent) 30%, var(--border) 70%);
+    transform: scale(1);
+  }
+
+  body:has(#proj-horas:target) .projects-nav a[href="#proj-horas"],
+  body:has(#proj-clinicdesk:target) .projects-nav a[href="#proj-clinicdesk"],
+  body:has(#proj-bateria:target) .projects-nav a[href="#proj-bateria"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    transform: scale(1.18);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent 75%);
+  }
 }
 
 /* Fallback sin :has(): primer enlace marcado de forma estable */
@@ -1224,6 +1389,7 @@ body:has(#mode-brutal:checked):has(#preferencias:target) nav a[href="#preferenci
   .mode-toggle,
   .print-hint,
   nav,
+  .projects-nav,
   .cv-nav,
   .btn,
   .btn-secondary,
@@ -1253,10 +1419,26 @@ body:has(#mode-brutal:checked):has(#preferencias:target) nav a[href="#preferenci
 
   .app::before,
   .app::after,
+  .projects-carousel-wrap::before,
+  .projects-carousel-wrap::after,
   .card::before,
   .flip-front::before,
   .flip-back::before {
     display: none !important;
+  }
+
+  .projects-carousel-wrap,
+  .projects-carousel {
+    display: block !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .project-card {
+    display: block !important;
+    margin-bottom: 0.5rem !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   header,

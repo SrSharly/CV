@@ -208,68 +208,96 @@
         <section id="proyectos">
           <h2>Proyectos</h2>
 
-          <article>
-            <h3>Horas_Sindicales</h3>
-            <ul>
-              <li>Diseñé la solución con enfoque de puertos y adaptadores para desacoplar dominio, UI e infraestructura.</li>
-              <li>Implementé persistencia con SQLite y gestioné cambios de esquema mediante migraciones SQL versionadas.</li>
-              <li>Integré Google Sheets para entrada y sincronización de datos operativos desde hojas compartidas.</li>
-              <li>Automatizé generación de PDF para formalizar documentación y facilitar distribución administrativa.</li>
-              <li>Empaqueté la aplicación para Windows con PyInstaller y preparé instalador con Inno Setup.</li>
-              <li>Construí pruebas con pytest por capa para validar reglas de negocio, adaptadores y flujo de aplicación.</li>
-              <li>Documenté configuración y despliegue para simplificar mantenimiento y soporte a usuarios finales.</li>
-            </ul>
-            <p>
-              <strong>Tech Highlights</strong><br />
-              Python + PySide6 + SQLite con migraciones.<br />
-              Integración Google Sheets y exportación PDF.<br />
-              Packaging Windows (PyInstaller + Inno Setup) y testing por capas.
-            </p>
-            <p>Este proyecto demuestra capacidad para entregar producto instalable para usuarios finales.</p>
-            <p><a href="https://github.com/carlos-arcas/Horas_Sindicales" target="_blank" rel="noopener">Repositorio: Horas_Sindicales</a></p>
-          </article>
+          <nav class="projects-nav" aria-label="Ir a proyecto">
+            <a class="dot" href="#proj-horas"><span class="sr-only">Horas Sindicales</span></a>
+            <a class="dot" href="#proj-clinicdesk"><span class="sr-only">ClinicDesk</span></a>
+            <a class="dot" href="#proj-bateria"><span class="sr-only">Batería Fotovoltaica</span></a>
+          </nav>
 
-          <article>
-            <h3>clinicdesk</h3>
-            <ul>
-              <li>Construí una aplicación multipágina con PySide6 para centralizar flujos operativos de clínica en una sola interfaz.</li>
-              <li>Definí contratos con clases ABC para desacoplar componentes y facilitar sustitución de implementaciones.</li>
-              <li>Organicé la lógica en casos de uso para aislar reglas de negocio frente a eventos de interfaz.</li>
-              <li>Implementé persistencia SQLite apoyada en schema SQL para controlar estructura y evolución de datos.</li>
-              <li>Desarrollé pruebas con pytest para validar casos de uso, repositorios y comportamiento esperado de módulos clave.</li>
-              <li>Estructuré la aplicación para facilitar mantenimiento incremental sin bloquear nuevas funcionalidades.</li>
-              <li>Documenté decisiones técnicas para acelerar onboarding y reducir fricción en futuras iteraciones.</li>
-            </ul>
-            <p>
-              <strong>Tech Highlights</strong><br />
-              App desktop multipágina con PySide6 / Qt.<br />
-              Contratos ABC + casos de uso + SQLite con schema SQL.<br />
-              Testing con pytest enfocado en estabilidad funcional.
-            </p>
-            <p>Este proyecto demuestra capacidad para diseñar aplicaciones desktop mantenibles con estructura por capas.</p>
-            <p><a href="https://github.com/carlos-arcas/clinicdesk" target="_blank" rel="noopener">Repositorio: clinicdesk</a></p>
-          </article>
+          <div class="projects-carousel-wrap">
+            <div class="projects-carousel" aria-label="Carrusel de proyectos">
+              <article class="project-card" id="proj-horas" tabindex="-1">
+                <h3>Horas_Sindicales</h3>
+                <ul>
+                  <li>Diseñé la solución con enfoque de puertos y adaptadores para desacoplar dominio, UI e infraestructura.</li>
+                  <li>Implementé persistencia con SQLite y gestioné cambios de esquema mediante migraciones SQL versionadas.</li>
+                  <li>Integré Google Sheets para entrada y sincronización de datos operativos desde hojas compartidas.</li>
+                  <li>Automatizé generación de PDF para formalizar documentación y facilitar distribución administrativa.</li>
+                  <li>Empaqueté la aplicación para Windows con PyInstaller y preparé instalador con Inno Setup.</li>
+                  <li>Construí pruebas con pytest por capa para validar reglas de negocio, adaptadores y flujo de aplicación.</li>
+                  <li>Documenté configuración y despliegue para simplificar mantenimiento y soporte a usuarios finales.</li>
+                </ul>
+                <p>
+                  <strong>Tech Highlights</strong><br />
+                  Python + PySide6 + SQLite con migraciones.<br />
+                  Integración Google Sheets y exportación PDF.<br />
+                  Packaging Windows (PyInstaller + Inno Setup) y testing por capas.
+                </p>
+                <p>Este proyecto demuestra capacidad para entregar producto instalable para usuarios finales.</p>
+                <div class="project-cta">
+                  <a class="btn" href="https://github.com/carlos-arcas/Horas_Sindicales" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="project-pager">
+                    <a class="btn ghost" href="#proj-bateria">← Prev</a>
+                    <a class="btn ghost" href="#proj-clinicdesk">Next →</a>
+                  </div>
+                </div>
+              </article>
 
-          <article>
-            <h3>Bateria_Fotovoltaica</h3>
-            <ul>
-              <li>Desarrollé un simulador técnico para analizar comportamiento energético y escenarios de operación de batería.</li>
-              <li>Estructuré el proyecto en capas domain/application/infrastructure/ui para separar modelo, orquestación y entrada/salida.</li>
-              <li>Implementé pruebas unitarias, de integración y de rendimiento para validar exactitud y respuesta del simulador.</li>
-              <li>Incorporé exportación a Excel para compartir resultados con usuarios técnicos y de negocio sin dependencias extra.</li>
-              <li>Gestioné persistencia en JSON y Parquet para soportar trazabilidad de simulaciones y reutilización de resultados.</li>
-              <li>Documenté decisiones de diseño y límites de arquitectura en ARCHITECTURE.md para guiar evolución del sistema.</li>
-              <li>Preparé base de código orientada a ampliación de reglas y nuevos escenarios sin reescrituras globales.</li>
-            </ul>
-            <p>
-              <strong>Tech Highlights</strong><br />
-              Simulador Python con capas domain/application/infrastructure/ui.<br />
-              Persistencia JSON/Parquet y exportación Excel.<br />
-              Suite de testing unit/integration/performance + ARCHITECTURE.md.
-            </p>
-            <p>Este proyecto demuestra capacidad para estructurar tests por dominio y frontera de integración.</p>
-            <p><a href="https://github.com/carlos-arcas/Bateria_Fotovoltaica" target="_blank" rel="noopener">Repositorio: Bateria_Fotovoltaica</a></p>
-          </article>
+              <article class="project-card" id="proj-clinicdesk" tabindex="-1">
+                <h3>clinicdesk</h3>
+                <ul>
+                  <li>Construí una aplicación multipágina con PySide6 para centralizar flujos operativos de clínica en una sola interfaz.</li>
+                  <li>Definí contratos con clases ABC para desacoplar componentes y facilitar sustitución de implementaciones.</li>
+                  <li>Organicé la lógica en casos de uso para aislar reglas de negocio frente a eventos de interfaz.</li>
+                  <li>Implementé persistencia SQLite apoyada en schema SQL para controlar estructura y evolución de datos.</li>
+                  <li>Desarrollé pruebas con pytest para validar casos de uso, repositorios y comportamiento esperado de módulos clave.</li>
+                  <li>Estructuré la aplicación para facilitar mantenimiento incremental sin bloquear nuevas funcionalidades.</li>
+                  <li>Documenté decisiones técnicas para acelerar onboarding y reducir fricción en futuras iteraciones.</li>
+                </ul>
+                <p>
+                  <strong>Tech Highlights</strong><br />
+                  App desktop multipágina con PySide6 / Qt.<br />
+                  Contratos ABC + casos de uso + SQLite con schema SQL.<br />
+                  Testing con pytest enfocado en estabilidad funcional.
+                </p>
+                <p>Este proyecto demuestra capacidad para diseñar aplicaciones desktop mantenibles con estructura por capas.</p>
+                <div class="project-cta">
+                  <a class="btn" href="https://github.com/carlos-arcas/clinicdesk" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="project-pager">
+                    <a class="btn ghost" href="#proj-horas">← Prev</a>
+                    <a class="btn ghost" href="#proj-bateria">Next →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="project-card" id="proj-bateria" tabindex="-1">
+                <h3>Bateria_Fotovoltaica</h3>
+                <ul>
+                  <li>Desarrollé un simulador técnico para analizar comportamiento energético y escenarios de operación de batería.</li>
+                  <li>Estructuré el proyecto en capas domain/application/infrastructure/ui para separar modelo, orquestación y entrada/salida.</li>
+                  <li>Implementé pruebas unitarias, de integración y de rendimiento para validar exactitud y respuesta del simulador.</li>
+                  <li>Incorporé exportación a Excel para compartir resultados con usuarios técnicos y de negocio sin dependencias extra.</li>
+                  <li>Gestioné persistencia en JSON y Parquet para soportar trazabilidad de simulaciones y reutilización de resultados.</li>
+                  <li>Documenté decisiones de diseño y límites de arquitectura en ARCHITECTURE.md para guiar evolución del sistema.</li>
+                  <li>Preparé base de código orientada a ampliación de reglas y nuevos escenarios sin reescrituras globales.</li>
+                </ul>
+                <p>
+                  <strong>Tech Highlights</strong><br />
+                  Simulador Python con capas domain/application/infrastructure/ui.<br />
+                  Persistencia JSON/Parquet y exportación Excel.<br />
+                  Suite de testing unit/integration/performance + ARCHITECTURE.md.
+                </p>
+                <p>Este proyecto demuestra capacidad para estructurar tests por dominio y frontera de integración.</p>
+                <div class="project-cta">
+                  <a class="btn" href="https://github.com/carlos-arcas/Bateria_Fotovoltaica" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="project-pager">
+                    <a class="btn ghost" href="#proj-clinicdesk">← Prev</a>
+                    <a class="btn ghost" href="#proj-horas">Next →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
         </section>
 
         <section id="skills">
