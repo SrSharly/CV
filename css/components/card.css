@@ -1,0 +1,25 @@
+.card {
+  border: 1px solid var(--color-theme-border);
+  border-radius: var(--radius-m);
+  background: color-mix(in srgb, var(--color-theme-surface) 94%, white 6%);
+  padding: var(--space-4);
+}
+
+.project-card {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.project-card__header,
+.project-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.project-card__body {
+  display: grid;
+  gap: var(--space-3);
+}

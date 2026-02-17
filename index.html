@@ -8,10 +8,7 @@
       name="description"
       content="Python Application Engineer especializado en arquitectura por capas, herramientas internas, automatización de datos y Power BI."
     />
-    <meta
-      property="og:title"
-      content="Carlos Arcas | Python Application Engineer | Data Automation"
-    />
+    <meta property="og:title" content="Carlos Arcas | Python Application Engineer | Data Automation" />
     <meta
       property="og:description"
       content="Python Application Engineer especializado en arquitectura por capas, herramientas internas, automatización de datos y Power BI."
@@ -21,18 +18,6 @@
     <meta property="og:site_name" content="CV de Carlos Arcas" />
     <meta property="og:url" content="https://carlos-arcas.github.io/CV/" />
     <link rel="stylesheet" href="styles.css" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Carlos Arcas",
-        "jobTitle": "Python Application Engineer | Data Automation | BI",
-        "email": "mailto:carlos.arcas.alcala@gmail.com",
-        "addressLocality": "Sevilla",
-        "url": "https://carlos-arcas.github.io/CV/",
-        "sameAs": ["https://github.com/carlos-arcas"]
-      }
-    </script>
   </head>
   <body>
     <input type="radio" name="mode" id="mode-boring" class="mode-toggle" checked />
@@ -40,371 +25,20 @@
     <input type="radio" name="mode" id="mode-brutal" class="mode-toggle" />
 
     <div class="mode-switcher" role="group" aria-label="Selector de modo visual">
-      <label for="mode-boring" tabindex="0">Aburrimode</label>
-      <label for="mode-cyber" tabindex="0">Cyberpunk</label>
-      <label for="mode-brutal" tabindex="0">Brutal</label>
+      <label class="mode-switcher__option" for="mode-boring" tabindex="0">Aburrimode</label>
+      <label class="mode-switcher__option" for="mode-cyber" tabindex="0">Cyberpunk</label>
+      <label class="mode-switcher__option" for="mode-brutal" tabindex="0">Brutal</label>
     </div>
 
-    <div class="app">
-      <header>
-        <h1>Carlos Arcas</h1>
-        <p>Python Application Engineer | Data Automation | BI</p>
-        <p class="print-hint">Para guardar en PDF: Ctrl+P → Guardar como PDF</p>
-        <ul>
-          <li>Ubicación: Sevilla (Remoto)</li>
-          <li>
-            Email:
-            <a href="mailto:carlos.arcas.alcala@gmail.com">carlos.arcas.alcala@gmail.com</a>
-          </li>
-          <li>
-            GitHub:
-            <a href="https://github.com/carlos-arcas" target="_blank" rel="noopener">https://github.com/carlos-arcas</a>
-          </li>
-          <li>
-            Web:
-            <a href="https://carlos-arcas.github.io/CV/" target="_blank" rel="noopener">https://carlos-arcas.github.io/CV/</a>
-          </li>
-        </ul>
-      </header>
-
-      <nav class="cv-nav" aria-label="Navegación principal del currículum por secciones">
-        <ul>
-          <li><a href="#hero" aria-current="page">Resumen profesional</a></li>
-          <li><a href="#enfoque-tecnico">Enfoque técnico</a></li>
-          <li><a href="#impacto">Propuesta de valor</a></li>
-          <li><a href="#experiencia">Experiencia profesional</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#skills">Habilidades técnicas</a></li>
-          <li><a href="#formacion">Formación</a></li>
-          <li><a href="#idiomas">Idiomas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="#preferencias">Preferencias profesionales</a></li>
-        </ul>
-      </nav>
-
-      <main>
-        <section id="hero">
-          <h2>Resumen profesional</h2>
-          <p>
-            Diseño y mantengo aplicaciones internas en Python con arquitectura por capas, orientadas a
-            estabilidad operativa y mantenimiento evolutivo.
-          </p>
-          <p>
-            Combino PySide6, pytest y persistencia SQLite para construir soluciones desktop con reglas de
-            negocio desacopladas e integración técnica controlada.
-          </p>
-          <p>
-            Desarrollo pipelines ETL y modelos para BI con SQL, SOQL y Power BI, entregando datasets
-            trazables para reporting y toma de decisiones.
-          </p>
-          <p>
-            Busco rol como Python Application Engineer / Data Automation Engineer en entorno técnico con revisión de código.
-          </p>
-        </section>
-
-        <section id="enfoque-tecnico">
-          <h2>Enfoque técnico</h2>
-          <ul>
-            <li>Diseño pensando en mantenibilidad y responsabilidades bien separadas desde el inicio.</li>
-            <li>Defino contratos explícitos entre capas para reducir acoplamiento y facilitar evolución.</li>
-            <li>Planteo testing por nivel (unit e integration) según el riesgo real de cada componente.</li>
-            <li>Priorizo reproducibilidad y automatización antes de depender de procesos manuales.</li>
-            <li>Documento decisiones técnicas y supuestos funcionales como parte del producto.</li>
-          </ul>
-        </section>
-
-        <section id="impacto">
-          <h2>Propuesta de valor</h2>
-          <ul>
-            <li>Diseño herramientas internas en Python con arquitectura por capas para reducir dependencia de procesos manuales.</li>
-            <li>Integro datos y servicios externos mediante adaptadores para desacoplar reglas de negocio de la infraestructura.</li>
-            <li>Aplico validaciones y testing con pytest para sostener calidad de datos y estabilidad funcional en producción.</li>
-            <li>Conecto automatización de datos con BI para entregar datasets fiables y listos para consumo operativo.</li>
-          </ul>
-        </section>
-
-        <section id="experiencia">
-          <h2>Experiencia profesional</h2>
-          <h3>AYESA — Proyectos Endesa (Sep 2019 – Actualidad)</h3>
-          <p>Rol técnico autónomo con responsabilidad directa sobre diseño e implementación.</p>
-
-          <article>
-            <h3>Endesa X (Marketing) (2024–Actualidad)</h3>
-            <ul>
-              <li>
-                Desarrollé pipelines ETL con Python para integrar fuentes de negocio y marketing en flujos
-                automatizados de extracción, transformación y carga.
-              </li>
-              <li>
-                Implementé integraciones con Salesforce mediante SOQL y con repositorios SQL/Redshift para
-                consolidar información en estructuras analíticas reutilizables.
-              </li>
-              <li>
-                Orquesté automatizaciones de descarga e ingesta de archivos para garantizar disponibilidad
-                de datos en ventanas operativas definidas.
-              </li>
-              <li>
-                Construí datasets estables para Power BI con criterios de consistencia, tipado y reglas de
-                validación previas al modelado.
-              </li>
-              <li>
-                Refactoricé scripts y módulos Python para mejorar mantenibilidad, reutilización y claridad
-                de la base de código.
-              </li>
-              <li>
-                Generé ejecutables para usuarios no técnicos y documentación funcional para facilitar
-                adopción de herramientas internas.
-              </li>
-              <li>
-                Estandaricé criterios de transformación y calidad de datos, reduciendo retrabajos por
-                discrepancias entre fuentes.
-              </li>
-            </ul>
-            <h4>Aportación / Resultado</h4>
-            <ul>
-              <li>Automatización de procesos clave con menor intervención manual en operación diaria.</li>
-              <li>Mayor estabilidad en datasets de consumo BI mediante reglas homogéneas de integración.</li>
-              <li>Mejora de mantenibilidad por modularización y estandarización del código de soporte.</li>
-            </ul>
-          </article>
-
-          <article>
-            <h3>Endesa Distribución (2019–2024)</h3>
-            <ul>
-              <li>
-                Construí automatizaciones con Python y SQL para estandarizar extracciones periódicas y
-                producir datasets consistentes para equipos operativos.
-              </li>
-              <li>
-                Diseñé consultas SQL reutilizables para separar lógica de negocio de peticiones puntuales y
-                mantener un flujo de entrega estable.
-              </li>
-              <li>
-                Implementé controles de data quality sobre nulos, duplicados y coherencia entre campos para
-                detectar incidencias antes de consumo.
-              </li>
-              <li>
-                Integré fuentes corporativas y estructuré salidas en formatos requeridos por negocio,
-                priorizando trazabilidad y repetibilidad técnica.
-              </li>
-              <li>
-                Generé datasets estables para reporting y seguimiento operacional, reduciendo dependencia de
-                manipulación manual en cada ciclo.
-              </li>
-              <li>
-                Documenté reglas de transformación y validación para facilitar mantenimiento, transferencia
-                de conocimiento y continuidad del servicio.
-              </li>
-            </ul>
-            <h4>Aportación / Resultado</h4>
-            <ul>
-              <li>Reducción de carga manual en extracciones recurrentes y preparación de entregables.</li>
-              <li>Estandarización de procesos de datos con mayor estabilidad en cada ejecución.</li>
-              <li>Mejor calidad funcional y de datos gracias a reglas explícitas de validación.</li>
-            </ul>
-          </article>
-        </section>
-
-        <section id="proyectos" class="projects" aria-labelledby="projects-title">
-          <header class="section-header">
-            <h2 id="projects-title">Proyectos</h2>
-            <p class="muted">Apps desktop en Python (PySide6), arquitectura por capas, persistencia y testing.</p>
-          </header>
-
-          <nav class="projects-dots" aria-label="Ir a proyecto">
-            <a class="dot" href="#proj-horas"><span class="sr-only">Horas Sindicales</span></a>
-            <a class="dot" href="#proj-clinicdesk"><span class="sr-only">ClinicDesk</span></a>
-            <a class="dot" href="#proj-bateria"><span class="sr-only">Batería Fotovoltaica</span></a>
-          </nav>
-
-          <div class="projects-carousel-wrap">
-            <div class="carousel" aria-label="Carrusel de proyectos">
-              <article class="project-card card" id="proj-horas">
-                <header class="project-head">
-                  <h3>Horas Sindicales</h3>
-                  <div class="project-tags">
-                    <span class="chip">Python</span>
-                    <span class="chip">PySide6</span>
-                    <span class="chip">SQLite</span>
-                    <span class="chip">PyInstaller</span>
-                  </div>
-                </header>
-
-                <div class="project-body">
-                  <ul>
-                    <li>Diseñé la solución con enfoque de puertos y adaptadores para desacoplar dominio, UI e infraestructura.</li>
-                    <li>Implementé persistencia con SQLite y gestioné cambios de esquema mediante migraciones SQL versionadas.</li>
-                    <li>Integré Google Sheets para entrada y sincronización de datos operativos desde hojas compartidas.</li>
-                    <li>Automatizé generación de PDF para formalizar documentación y facilitar distribución administrativa.</li>
-                    <li>Empaqueté la aplicación para Windows con PyInstaller y preparé instalador con Inno Setup.</li>
-                    <li>Construí pruebas con pytest por capa para validar reglas de negocio, adaptadores y flujo de aplicación.</li>
-                    <li>Documenté configuración y despliegue para simplificar mantenimiento y soporte a usuarios finales.</li>
-                  </ul>
-                  <ul>
-                    <li><strong>Tech Highlights:</strong> Python + PySide6 + SQLite con migraciones.</li>
-                    <li>Integración Google Sheets y exportación PDF.</li>
-                    <li>Packaging Windows (PyInstaller + Inno Setup) y testing por capas.</li>
-                    <li>Este proyecto demuestra capacidad para entregar producto instalable para usuarios finales.</li>
-                  </ul>
-                </div>
-
-                <footer class="project-foot">
-                  <a class="btn" href="https://github.com/carlos-arcas/Horas_Sindicales" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="pager">
-                    <a class="btn ghost" href="#proj-bateria">← Prev</a>
-                    <a class="btn ghost" href="#proj-clinicdesk">Next →</a>
-                  </div>
-                </footer>
-              </article>
-
-              <article class="project-card card" id="proj-clinicdesk">
-                <header class="project-head">
-                  <h3>ClinicDesk</h3>
-                  <div class="project-tags">
-                    <span class="chip">Python</span>
-                    <span class="chip">PySide6</span>
-                    <span class="chip">SQLite</span>
-                    <span class="chip">pytest</span>
-                  </div>
-                </header>
-
-                <div class="project-body">
-                  <ul>
-                    <li>Construí una aplicación multipágina con PySide6 para centralizar flujos operativos de clínica en una sola interfaz.</li>
-                    <li>Definí contratos con clases ABC para desacoplar componentes y facilitar sustitución de implementaciones.</li>
-                    <li>Organicé la lógica en casos de uso para aislar reglas de negocio frente a eventos de interfaz.</li>
-                    <li>Implementé persistencia SQLite apoyada en schema SQL para controlar estructura y evolución de datos.</li>
-                    <li>Desarrollé pruebas con pytest para validar casos de uso, repositorios y comportamiento esperado de módulos clave.</li>
-                    <li>Estructuré la aplicación para facilitar mantenimiento incremental sin bloquear nuevas funcionalidades.</li>
-                    <li>Documenté decisiones técnicas para acelerar onboarding y reducir fricción en futuras iteraciones.</li>
-                  </ul>
-                  <ul>
-                    <li><strong>Tech Highlights:</strong> App desktop multipágina con PySide6 / Qt.</li>
-                    <li>Contratos ABC + casos de uso + SQLite con schema SQL.</li>
-                    <li>Testing con pytest enfocado en estabilidad funcional.</li>
-                    <li>Este proyecto demuestra capacidad para diseñar aplicaciones desktop mantenibles con estructura por capas.</li>
-                  </ul>
-                </div>
-
-                <footer class="project-foot">
-                  <a class="btn" href="https://github.com/carlos-arcas/clinicdesk" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="pager">
-                    <a class="btn ghost" href="#proj-horas">← Prev</a>
-                    <a class="btn ghost" href="#proj-bateria">Next →</a>
-                  </div>
-                </footer>
-              </article>
-
-              <article class="project-card card" id="proj-bateria">
-                <header class="project-head">
-                  <h3>Batería Fotovoltaica</h3>
-                  <div class="project-tags">
-                    <span class="chip">Python</span>
-                    <span class="chip">PySide6</span>
-                    <span class="chip">tests</span>
-                    <span class="chip">Excel export</span>
-                  </div>
-                </header>
-
-                <div class="project-body">
-                  <ul>
-                    <li>Desarrollé un simulador técnico para analizar comportamiento energético y escenarios de operación de batería.</li>
-                    <li>Estructuré el proyecto en capas domain/application/infrastructure/ui para separar modelo, orquestación y entrada/salida.</li>
-                    <li>Implementé pruebas unitarias, de integración y de rendimiento para validar exactitud y respuesta del simulador.</li>
-                    <li>Incorporé exportación a Excel para compartir resultados con usuarios técnicos y de negocio sin dependencias extra.</li>
-                    <li>Gestioné persistencia en JSON y Parquet para soportar trazabilidad de simulaciones y reutilización de resultados.</li>
-                    <li>Documenté decisiones de diseño y límites de arquitectura en ARCHITECTURE.md para guiar evolución del sistema.</li>
-                    <li>Preparé base de código orientada a ampliación de reglas y nuevos escenarios sin reescrituras globales.</li>
-                  </ul>
-                  <ul>
-                    <li><strong>Tech Highlights:</strong> Simulador Python con capas domain/application/infrastructure/ui.</li>
-                    <li>Persistencia JSON/Parquet y exportación Excel.</li>
-                    <li>Suite de testing unit/integration/performance + ARCHITECTURE.md.</li>
-                    <li>Este proyecto demuestra capacidad para estructurar tests por dominio y frontera de integración.</li>
-                  </ul>
-                </div>
-
-                <footer class="project-foot">
-                  <a class="btn" href="https://github.com/carlos-arcas/Bateria_Fotovoltaica" target="_blank" rel="noopener">Ver repo</a>
-                  <div class="pager">
-                    <a class="btn ghost" href="#proj-clinicdesk">← Prev</a>
-                    <a class="btn ghost" href="#proj-horas">Next →</a>
-                  </div>
-                </footer>
-              </article>
-            </div>
-          </div>
-        </section>
-
-        <section id="skills">
-          <h2>Habilidades técnicas</h2>
-
-          <h3>A) Core Engineering</h3>
-          <ul>
-            <li>Python</li>
-            <li>PySide6 / Qt</li>
-            <li>Arquitectura por capas</li>
-            <li>Repository pattern</li>
-            <li>Ports &amp; Adapters</li>
-            <li>Casos de uso</li>
-            <li>Testing con pytest</li>
-            <li>Packaging Windows</li>
-          </ul>
-
-          <h3>B) Data &amp; Persistence</h3>
-          <ul>
-            <li>SQLite</li>
-            <li>Migraciones SQL</li>
-            <li>JSON / Parquet</li>
-            <li>Validación de datos</li>
-            <li>Excel I/O</li>
-          </ul>
-
-          <h3>C) Integraciones</h3>
-          <ul>
-            <li>Google Sheets (gspread)</li>
-            <li>Servicios externos vía adaptadores</li>
-            <li>Automatización con scripts</li>
-          </ul>
-
-          <h3>D) BI &amp; Automatización</h3>
-          <ul>
-            <li>SQL</li>
-            <li>SOQL</li>
-            <li>ETL con Python</li>
-            <li>Power BI</li>
-            <li>DAX (intermedio)</li>
-            <li>Redshift</li>
-          </ul>
-
-        </section>
-
-        <section id="formacion">
-          <h2>Formación</h2>
-          <p><strong>Formación complementaria</strong></p>
-          <ul>
-            <li>2011 — C.F.G.S Desarrollo de Aplicaciones Informáticas — I.E.S Velázquez</li>
-            <li>2011 — Diseño Web y Multimedia — 372 horas — AFOBAN</li>
-            <li>2007 — Técnico de Sistemas Microinformáticos — 534 horas — CENEC</li>
-          </ul>
-        </section>
-
-        <section id="idiomas">
-          <h2>Idiomas</h2>
-          <ul>
-            <li>Inglés: alto</li>
-            <li>Francés: medio (lectura/escritura), conversación baja</li>
-          </ul>
-        </section>
-
-        <section id="contacto">
-          <h2>Contacto</h2>
-          <ul>
-            <li>
-              Email:
-              <a href="mailto:carlos.arcas.alcala@gmail.com">carlos.arcas.alcala@gmail.com</a>
-            </li>
+    <div class="cv">
+      <div class="cv__shell">
+        <header class="cv-header" id="inicio">
+          <h1>Carlos Arcas</h1>
+          <p>Python Application Engineer | Data Automation | BI</p>
+          <p class="u-muted">Para guardar en PDF: Ctrl+P → Guardar como PDF</p>
+          <ul class="cv-header__meta">
             <li>Ubicación: Sevilla (Remoto)</li>
+            <li>Email: <a href="mailto:carlos.arcas.alcala@gmail.com">carlos.arcas.alcala@gmail.com</a></li>
             <li>
               GitHub:
               <a href="https://github.com/carlos-arcas" target="_blank" rel="noopener">https://github.com/carlos-arcas</a>
@@ -414,118 +48,220 @@
               <a href="https://carlos-arcas.github.io/CV/" target="_blank" rel="noopener">https://carlos-arcas.github.io/CV/</a>
             </li>
           </ul>
-        </section>
+        </header>
 
-        <section id="preferencias">
-          <h2>Preferencias profesionales</h2>
-          <ul>
-            <li>Disponible para trabajo remoto y colaboración híbrida puntual según necesidad del equipo.</li>
-            <li>Rango objetivo de compensación: a partir de 30k, alineado con alcance técnico y responsabilidad.</li>
-            <li>Interés en equipos técnicos con revisión de código, estándares de calidad y mejora continua.</li>
+        <nav class="cv-nav" aria-label="Navegación principal del currículum por secciones">
+          <ul class="cv-nav__list">
+            <li><a class="cv-nav__link" href="#hero" aria-current="page">Resumen</a></li>
+            <li><a class="cv-nav__link" href="#enfoque-tecnico">Enfoque técnico</a></li>
+            <li><a class="cv-nav__link" href="#impacto">Valor</a></li>
+            <li><a class="cv-nav__link" href="#experiencia">Experiencia</a></li>
+            <li><a class="cv-nav__link" href="#proyectos">Proyectos</a></li>
+            <li><a class="cv-nav__link" href="#skills">Skills</a></li>
+            <li><a class="cv-nav__link" href="#formacion">Formación</a></li>
+            <li><a class="cv-nav__link" href="#idiomas">Idiomas</a></li>
+            <li><a class="cv-nav__link" href="#contacto">Contacto</a></li>
+            <li><a class="cv-nav__link" href="#preferencias">Preferencias</a></li>
           </ul>
-        </section>
+        </nav>
 
-        <section class="sr-only" aria-label="ATS Plain Text">
-          <h2>ATS Plain Text</h2>
-          <p>
-            NAME
-            Carlos Arcas
+        <main class="cv__main">
+          <section id="hero" class="section">
+            <h2>Resumen profesional</h2>
+            <div class="section__content">
+              <p>Diseño y mantengo aplicaciones internas en Python con arquitectura por capas, orientadas a estabilidad operativa y mantenimiento evolutivo.</p>
+              <p>Combino PySide6, pytest y persistencia SQLite para construir soluciones desktop con reglas de negocio desacopladas e integración técnica controlada.</p>
+              <p>Desarrollo pipelines ETL y modelos para BI con SQL, SOQL y Power BI, entregando datasets trazables para reporting y toma de decisiones.</p>
+              <p>Busco rol como Python Application Engineer / Data Automation Engineer en entorno técnico con revisión de código.</p>
+            </div>
+          </section>
 
-            TITLE
-            Python Application Engineer | Data Automation | BI
+          <section id="enfoque-tecnico" class="section">
+            <h2>Enfoque técnico</h2>
+            <ul class="list-grid">
+              <li>Diseño pensando en mantenibilidad y responsabilidades bien separadas desde el inicio.</li>
+              <li>Defino contratos explícitos entre capas para reducir acoplamiento y facilitar evolución.</li>
+              <li>Planteo testing por nivel (unit e integration) según el riesgo real de cada componente.</li>
+              <li>Priorizo reproducibilidad y automatización antes de depender de procesos manuales.</li>
+              <li>Documento decisiones técnicas y supuestos funcionales como parte del producto.</li>
+            </ul>
+          </section>
 
-            LOCATION
-            Sevilla (Remoto)
+          <section id="impacto" class="section">
+            <h2>Propuesta de valor</h2>
+            <ul class="list-grid">
+              <li>Diseño herramientas internas en Python con arquitectura por capas para reducir dependencia de procesos manuales.</li>
+              <li>Integro datos y servicios externos mediante adaptadores para desacoplar reglas de negocio de la infraestructura.</li>
+              <li>Aplico validaciones y testing con pytest para sostener calidad de datos y estabilidad funcional en producción.</li>
+              <li>Conecto automatización de datos con BI para entregar datasets fiables y listos para consumo operativo.</li>
+            </ul>
+          </section>
 
-            CONTACT
-            Email: carlos.arcas.alcala@gmail.com
-            GitHub: https://github.com/carlos-arcas
-            Web: https://carlos-arcas.github.io/CV/
+          <section id="experiencia" class="section">
+            <h2>Experiencia profesional</h2>
+            <h3>AYESA — Proyectos Endesa (Sep 2019 – Actualidad)</h3>
+            <p>Rol técnico autónomo con responsabilidad directa sobre diseño e implementación.</p>
 
-            SUMMARY
-            Python Application Engineer especializado en arquitectura por capas y desarrollo de herramientas internas en Python.
-            Diseño aplicaciones desktop con PySide6, casos de uso, testing con pytest y persistencia SQLite.
-            Integro servicios externos y automatizaciones con SQL, SOQL y ETL para flujos de datos trazables.
-            Construyo datasets para Power BI orientados a reporting operativo y decisiones de negocio.
-            Busco rol como Python Application Engineer / Data Automation Engineer en entorno técnico con revisión de código.
+            <article>
+              <h3>Endesa X (Marketing) (2024–Actualidad)</h3>
+              <ul class="list-grid">
+                <li>Desarrollé pipelines ETL con Python para integrar fuentes de negocio y marketing en flujos automatizados de extracción, transformación y carga.</li>
+                <li>Implementé integraciones con Salesforce mediante SOQL y con repositorios SQL/Redshift para consolidar información en estructuras analíticas reutilizables.</li>
+                <li>Orquesté automatizaciones de descarga e ingesta de archivos para garantizar disponibilidad de datos en ventanas operativas definidas.</li>
+                <li>Construí datasets estables para Power BI con criterios de consistencia, tipado y reglas de validación previas al modelado.</li>
+                <li>Refactoricé scripts y módulos Python para mejorar mantenibilidad, reutilización y claridad de la base de código.</li>
+                <li>Generé ejecutables para usuarios no técnicos y documentación funcional para facilitar adopción de herramientas internas.</li>
+                <li>Estandaricé criterios de transformación y calidad de datos, reduciendo retrabajos por discrepancias entre fuentes.</li>
+              </ul>
+            </article>
 
-            TECHNICAL APPROACH
-            Diseño pensando en mantenibilidad y responsabilidades bien separadas desde el inicio.
-            Defino contratos explícitos entre capas para reducir acoplamiento y facilitar evolución.
-            Planteo testing por nivel (unit e integration) según el riesgo real de cada componente.
-            Priorizo reproducibilidad y automatización antes de depender de procesos manuales.
-            Documento decisiones técnicas y supuestos funcionales como parte del producto.
+            <article>
+              <h3>Endesa Distribución (2019–2024)</h3>
+              <ul class="list-grid">
+                <li>Construí automatizaciones con Python y SQL para estandarizar extracciones periódicas y producir datasets consistentes para equipos operativos.</li>
+                <li>Diseñé consultas SQL reutilizables para separar lógica de negocio de peticiones puntuales y mantener un flujo de entrega estable.</li>
+                <li>Implementé controles de data quality sobre nulos, duplicados y coherencia entre campos para detectar incidencias antes de consumo.</li>
+                <li>Integré fuentes corporativas y estructuré salidas en formatos requeridos por negocio, priorizando trazabilidad y repetibilidad técnica.</li>
+                <li>Generé datasets estables para reporting y seguimiento operacional, reduciendo dependencia de manipulación manual en cada ciclo.</li>
+                <li>Documenté reglas de transformación y validación para facilitar mantenimiento, transferencia de conocimiento y continuidad del servicio.</li>
+              </ul>
+            </article>
+          </section>
 
-            EXPERIENCE
-            AYESA — Proyectos Endesa (Sep 2019 – Actualidad)
-            Rol técnico autónomo con responsabilidad directa sobre diseño e implementación.
+          <section id="proyectos" class="section" aria-labelledby="projects-title">
+            <header class="section__header">
+              <h2 id="projects-title">Proyectos</h2>
+              <p class="section__eyebrow">Apps desktop en Python (PySide6), arquitectura por capas, persistencia y testing.</p>
+            </header>
 
-            Endesa X (Marketing) (2024–Actualidad)
-            Desarrollo de pipelines ETL con Python para integración de fuentes de negocio.
-            Integración con Salesforce vía SOQL y entornos SQL/Redshift.
-            Automatización de descargas e ingesta de datos para ejecución recurrente.
-            Preparación de datasets para Power BI con criterios de calidad y estabilidad.
-            Refactorización de módulos Python, empaquetado para usuarios no técnicos y documentación funcional.
+            <nav class="projects-dots" aria-label="Ir a proyecto">
+              <a href="#proj-horas"><span class="u-sr-only">Horas Sindicales</span></a>
+              <a href="#proj-clinicdesk"><span class="u-sr-only">ClinicDesk</span></a>
+              <a href="#proj-bateria"><span class="u-sr-only">Batería Fotovoltaica</span></a>
+            </nav>
 
-            Endesa Distribución (2019–2024)
-            Construcción de automatizaciones con Python y SQL para extracciones periódicas.
-            Diseño de consultas reutilizables y estandarización de procesos de datos.
-            Implementación de controles de data quality y validaciones de consistencia.
-            Integración de fuentes corporativas y generación de datasets estables.
-            Documentación técnica para mantenimiento y continuidad del servicio.
+            <div class="projects-track">
+              <article class="project-card card" id="proj-horas">
+                <header class="project-card__header">
+                  <h3>Horas Sindicales</h3>
+                  <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">SQLite</span><span class="chip">PyInstaller</span></div>
+                </header>
+                <div class="project-card__body">
+                  <ul class="list-grid">
+                    <li>Diseñé la solución con enfoque de puertos y adaptadores para desacoplar dominio, UI e infraestructura.</li>
+                    <li>Implementé persistencia con SQLite y gestioné cambios de esquema mediante migraciones SQL versionadas.</li>
+                    <li>Integré Google Sheets para entrada y sincronización de datos operativos desde hojas compartidas.</li>
+                    <li>Automatizé generación de PDF para formalizar documentación y facilitar distribución administrativa.</li>
+                  </ul>
+                </div>
+                <footer class="project-card__footer">
+                  <a class="btn" href="https://github.com/carlos-arcas/Horas_Sindicales" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-bateria">← Prev</a><a class="btn btn--ghost" href="#proj-clinicdesk">Next →</a></div>
+                </footer>
+              </article>
 
-            PROJECTS
-            Horas Sindicales
-            Arquitectura con puertos y adaptadores.
-            Persistencia SQLite con migraciones SQL.
-            Integración con Google Sheets.
-            Generación de PDF.
-            Packaging Windows con PyInstaller e Inno Setup.
-            Testing por capas con pytest.
-            Este proyecto demuestra capacidad para entregar producto instalable para usuarios finales.
-            Link: https://github.com/carlos-arcas/Horas_Sindicales
+              <article class="project-card card" id="proj-clinicdesk">
+                <header class="project-card__header">
+                  <h3>ClinicDesk</h3>
+                  <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">SQLite</span><span class="chip">pytest</span></div>
+                </header>
+                <div class="project-card__body">
+                  <ul class="list-grid">
+                    <li>Construí una aplicación multipágina con PySide6 para centralizar flujos operativos de clínica en una sola interfaz.</li>
+                    <li>Definí contratos con clases ABC para desacoplar componentes y facilitar sustitución de implementaciones.</li>
+                    <li>Organicé la lógica en casos de uso para aislar reglas de negocio frente a eventos de interfaz.</li>
+                    <li>Desarrollé pruebas con pytest para validar casos de uso, repositorios y comportamiento esperado de módulos clave.</li>
+                  </ul>
+                </div>
+                <footer class="project-card__footer">
+                  <a class="btn" href="https://github.com/carlos-arcas/clinicdesk" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-horas">← Prev</a><a class="btn btn--ghost" href="#proj-bateria">Next →</a></div>
+                </footer>
+              </article>
 
-            ClinicDesk
-            Aplicación multipágina con PySide6.
-            Contratos definidos con clases ABC.
-            Organización por casos de uso.
-            Persistencia SQLite con schema SQL.
-            Testing con pytest en módulos clave.
-            Este proyecto demuestra capacidad para diseñar aplicaciones desktop mantenibles con estructura por capas.
-            Link: https://github.com/carlos-arcas/clinicdesk
+              <article class="project-card card" id="proj-bateria">
+                <header class="project-card__header">
+                  <h3>Batería Fotovoltaica</h3>
+                  <div class="chips"><span class="chip">Python</span><span class="chip">PySide6</span><span class="chip">tests</span><span class="chip">Excel export</span></div>
+                </header>
+                <div class="project-card__body">
+                  <ul class="list-grid">
+                    <li>Desarrollé un simulador técnico para analizar comportamiento energético y escenarios de operación de batería.</li>
+                    <li>Estructuré el proyecto en capas domain/application/infrastructure/ui para separar modelo, orquestación y entrada/salida.</li>
+                    <li>Implementé pruebas unitarias, de integración y de rendimiento para validar exactitud y respuesta del simulador.</li>
+                    <li>Gestioné persistencia en JSON y Parquet para soportar trazabilidad de simulaciones y reutilización de resultados.</li>
+                  </ul>
+                </div>
+                <footer class="project-card__footer">
+                  <a class="btn" href="https://github.com/carlos-arcas/Bateria_Fotovoltaica" target="_blank" rel="noopener">Ver repo</a>
+                  <div class="btn-group"><a class="btn btn--ghost" href="#proj-clinicdesk">← Prev</a><a class="btn btn--ghost" href="#proj-horas">Next →</a></div>
+                </footer>
+              </article>
+            </div>
+          </section>
 
-            Batería Fotovoltaica
-            Simulador técnico en Python.
-            Arquitectura domain/application/infrastructure/ui.
-            Tests unitarios, de integración y rendimiento.
-            Exportación Excel.
-            Persistencia JSON y Parquet.
-            Documento ARCHITECTURE.md.
-            Este proyecto demuestra capacidad para estructurar tests por dominio y frontera de integración.
-            Link: https://github.com/carlos-arcas/Bateria_Fotovoltaica
+          <section id="skills" class="section">
+            <h2>Habilidades técnicas</h2>
+            <div class="list-grid list-grid--two-col">
+              <article>
+                <h3>A) Core Engineering</h3>
+                <ul><li>Python</li><li>PySide6 / Qt</li><li>Arquitectura por capas</li><li>Repository pattern</li><li>Ports &amp; Adapters</li><li>Casos de uso</li><li>Testing con pytest</li><li>Packaging Windows</li></ul>
+              </article>
+              <article>
+                <h3>B) Data &amp; Persistence</h3>
+                <ul><li>SQLite</li><li>Migraciones SQL</li><li>JSON / Parquet</li><li>Validación de datos</li><li>Excel I/O</li></ul>
+              </article>
+              <article>
+                <h3>C) Integraciones</h3>
+                <ul><li>Google Sheets (gspread)</li><li>Servicios externos vía adaptadores</li><li>Automatización con scripts</li></ul>
+              </article>
+              <article>
+                <h3>D) BI &amp; Automatización</h3>
+                <ul><li>SQL</li><li>SOQL</li><li>ETL con Python</li><li>Power BI</li><li>DAX (intermedio)</li><li>Redshift</li></ul>
+              </article>
+            </div>
+          </section>
 
-            SKILLS
-            Core Engineering: Python, PySide6 / Qt, arquitectura por capas, repository pattern, ports & adapters, casos de uso, testing con pytest, packaging Windows.
-            Data & Persistence: SQLite, migraciones SQL, JSON / Parquet, validación de datos, Excel I/O.
-            Integraciones: Google Sheets (gspread), servicios externos vía adaptadores, automatización con scripts.
-            BI & Automatización: SQL, SOQL, ETL con Python, Power BI, DAX (intermedio), Redshift.
+          <section id="formacion" class="section">
+            <h2>Formación</h2>
+            <p><strong>Formación complementaria</strong></p>
+            <ul class="list-grid">
+              <li>2011 — C.F.G.S Desarrollo de Aplicaciones Informáticas — I.E.S Velázquez</li>
+              <li>2011 — Diseño Web y Multimedia — 372 horas — AFOBAN</li>
+              <li>2007 — Técnico de Sistemas Microinformáticos — 534 horas — CENEC</li>
+            </ul>
+          </section>
 
-            PREFERENCIAS PROFESIONALES
-            Disponible para trabajo remoto y colaboración híbrida puntual según necesidad del equipo.
-            Rango objetivo de compensación: a partir de 30k, alineado con alcance técnico y responsabilidad.
-            Interés en equipos técnicos con revisión de código, estándares de calidad y mejora continua.
+          <section id="idiomas" class="section">
+            <h2>Idiomas</h2>
+            <ul class="list-grid"><li>Inglés: alto</li><li>Francés: medio (lectura/escritura), conversación baja</li></ul>
+          </section>
 
-            EDUCATION
-            2011 — C.F.G.S Desarrollo de Aplicaciones Informáticas — I.E.S Velázquez
-            2011 — Diseño Web y Multimedia — 372 horas — AFOBAN
-            2007 — Técnico de Sistemas Microinformáticos — 534 horas — CENEC
+          <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <ul class="list-grid">
+              <li>Email: <a href="mailto:carlos.arcas.alcala@gmail.com">carlos.arcas.alcala@gmail.com</a></li>
+              <li>Ubicación: Sevilla (Remoto)</li>
+              <li>GitHub: <a href="https://github.com/carlos-arcas" target="_blank" rel="noopener">https://github.com/carlos-arcas</a></li>
+              <li>Web: <a href="https://carlos-arcas.github.io/CV/" target="_blank" rel="noopener">https://carlos-arcas.github.io/CV/</a></li>
+            </ul>
+          </section>
 
-            LANGUAGES
-            Inglés: alto
-            Francés: medio (lectura/escritura), conversación baja
-          </p>
-        </section>
-      </main>
+          <section id="preferencias" class="section">
+            <h2>Preferencias profesionales</h2>
+            <ul class="list-grid">
+              <li>Disponible para trabajo remoto y colaboración híbrida puntual según necesidad del equipo.</li>
+              <li>Rango objetivo de compensación: a partir de 30k, alineado con alcance técnico y responsabilidad.</li>
+              <li>Interés en equipos técnicos con revisión de código, estándares de calidad y mejora continua.</li>
+            </ul>
+          </section>
+
+          <section class="u-sr-only" aria-label="ATS Plain Text">
+            <h2>ATS Plain Text</h2>
+            <p>NAME Carlos Arcas TITLE Python Application Engineer | Data Automation | BI LOCATION Sevilla (Remoto)</p>
+          </section>
+        </main>
+      </div>
     </div>
   </body>
 </html>
